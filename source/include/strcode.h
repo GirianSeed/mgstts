@@ -27,9 +27,9 @@
 /*---------------------------------------------------------------------------*/
 
 #define CHARA_00014090          0x00014090
-#define CHARA_000190b3          0x000190b3
-#define CHARA_00019a53          0x00019a53
-#define CHARA_0001d98e          0x0001d98e
+#define CHARA_abs               0x000190b3  // GV_StrCode("abs") NewGclAbs
+#define CHARA_cos               0x00019a53  // GV_StrCode("cos") NewGclCos
+#define CHARA_sin               0x0001d98e  // GV_StrCode("sin") NewGclSin
 #define CHARA_000227d5          0x000227d5
 #define CHARA_00029972          0x00029972
 #define CHARA_0003f248          0x0003f248
@@ -90,7 +90,7 @@
 #define CHARA_00224b70          0x00224b70
 #define CHARA_00225078          0x00225078
 #define CHARA_0022e8ee          0x0022e8ee
-#define CHARA_002339b1          0x002339b1
+#define CHARA_002339b1          0x002339b1  // GV_StrCode("Locker")
 #define CHARA_00246dc5          0x00246dc5
 #define CHARA_0024eaa1          0x0024eaa1
 #define CHARA_00253d49          0x00253d49
@@ -114,11 +114,11 @@
 #define CHARA_002e572e          0x002e572e
 #define CHARA_002e9149          0x002e9149
 #define CHARA_002eb7ed          0x002eb7ed
-#define CHARA_00325c8e          0x00325c8e
+#define CHARA_atan              0x00325c8e  // GV_StrCode("atan") NewGclAtan
 #define CHARA_003287ed          0x003287ed
 #define CHARA_0032905c          0x0032905c
 #define CHARA_0032fb70          0x0032fb70
-#define CHARA_0033a20f          0x0033a20f
+#define CHARA_demo              0x0033a20f  // GV_StrCode("demo") NewPolygonDemoStart
 #define CHARA_0033cb5b          0x0033cb5b
 #define CHARA_0034baeb          0x0034baeb
 #define CHARA_0034cc13          0x0034cc13
@@ -135,7 +135,7 @@
 #define CHARA_00382f31          0x00382f31
 #define CHARA_0038e51b          0x0038e51b
 #define CHARA_00397d10          0x00397d10
-#define CHARA_003a9224          0x003a9224
+#define CHARA_rand              0x003a9224  // GV_StrCode("rand") NewRand
 #define CHARA_003a930b          0x003a930b
 #define CHARA_003ad7ae          0x003ad7ae
 #define CHARA_003b4d90          0x003b4d90
@@ -187,7 +187,7 @@
 #define CHARA_00525d9f          0x00525d9f
 #define CHARA_00528e88          0x00528e88
 #define CHARA_0052911a          0x0052911a
-#define CHARA_00542b2d          0x00542b2d
+#define CHARA_foreach           0x00542b2d  // GV_StrCode("foreach") NewForeach
 #define CHARA_0054814c          0x0054814c
 #define CHARA_005521e6          0x005521e6
 #define CHARA_005574e5          0x005574e5
@@ -196,7 +196,7 @@
 #define CHARA_00580458          0x00580458
 #define CHARA_005ab223          0x005ab223
 #define CHARA_005af93a          0x005af93a
-#define CHARA_005b316e          0x005b316e
+#define CHARA_varsave           0x005b316e  // GV_StrCode("varsave") NewSaveVariable
 #define CHARA_005b9f50          0x005b9f50
 #define CHARA_005d9037          0x005d9037
 #define CHARA_00602930          0x00602930
@@ -425,7 +425,7 @@
 #define CHARA_00f0a97c          0x00f0a97c
 #define CHARA_00f0d6cf          0x00f0d6cf
 #define CHARA_00f13775          0x00f13775
-#define CHARA_00f271b8          0x00f271b8
+#define CHARA_00f271b8          0x00f271b8  // GV_StrCode("Player")
 #define CHARA_00f28c13          0x00f28c13
 #define CHARA_00f2dfcd          0x00f2dfcd
 #define CHARA_00f2f1be          0x00f2f1be
@@ -452,6 +452,8 @@
 #define CHARA_00fe6730          0x00fe6730
 #define CHARA_00fee3c9          0x00fee3c9
 #define CHARA_00ff6d53          0x00ff6d53
+
+/*--- Polygon Demo Charas ---*/
 #define CHARA_01000000          0x01000000
 #define CHARA_01000001          0x01000001
 #define CHARA_01000002          0x01000002
