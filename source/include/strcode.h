@@ -90,7 +90,7 @@
 #define CHARA_00224b70          0x00224b70
 #define CHARA_00225078          0x00225078
 #define CHARA_0022e8ee          0x0022e8ee
-#define CHARA_002339b1          0x002339b1  // GV_StrCode("Locker")
+#define CHARA_Locker            0x002339b1  // GV_StrCode("Locker")
 #define CHARA_00246dc5          0x00246dc5
 #define CHARA_0024eaa1          0x0024eaa1
 #define CHARA_00253d49          0x00253d49
@@ -425,7 +425,7 @@
 #define CHARA_00f0a97c          0x00f0a97c
 #define CHARA_00f0d6cf          0x00f0d6cf
 #define CHARA_00f13775          0x00f13775
-#define CHARA_00f271b8          0x00f271b8  // GV_StrCode("Player")
+#define CHARA_Player            0x00f271b8  // GV_StrCode("Player")
 #define CHARA_00f28c13          0x00f28c13
 #define CHARA_00f2dfcd          0x00f2dfcd
 #define CHARA_00f2f1be          0x00f2f1be
