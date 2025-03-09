@@ -1,0 +1,14 @@
+#
+# .editorconfig for tremor r4573 (2003-05-31)
+#
+root = false
+
+[*.{c,h}]
+tab_width       = 8
+indent_size     = 2
+indent_style    = tab
+end_of_line     = unset
+
+max_line_length = off
+insert_final_newline = unset
+trim_trailing_whitespace = false
