@@ -8,11 +8,6 @@
 *.S             linguist-language=Assembly
 *.sx            linguist-language=Assembly
 
-# dvp-gas assembly
-*.dsm           linguist-language=Assembly
-*.vsm           linguist-language=Assembly
-*.vcl           linguist-language=Assembly
-
 # Makefile
 *.mkf           linguist-language=Makefile
 Makefile.*      linguist-language=Makefile

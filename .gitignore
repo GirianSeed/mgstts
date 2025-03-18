@@ -177,12 +177,9 @@ ipch/
 
 *.bin
 *.gcx
-*.ipk
 
-# PlayStation
-*.img
-PathDefs
-*.irx
-*.erx
+# GameCube
+apploader.img
+apploaderD.img
 
 !cdrom.img/
