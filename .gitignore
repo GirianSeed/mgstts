@@ -159,13 +159,10 @@ ipch/
 *.code-workspace
 
 ### CodeWarrior for GameCube ###
-
 *.elf
-*.dol
 *.plf
 *.preplf
 *.premap
-*.rel
 *.str
 
 # CodeWarrior considers ".pch" to be the source file extension
@@ -173,13 +170,17 @@ ipch/
 *.mch
 !*.pch
 
+### Dolphin SDK ###
+apploader.img
+apploaderD.img
+*.dol
+*.rel
+
 ### Custom exclusions ###
 
 *.bin
 *.gcx
+data.cnf
 
-# GameCube
-apploader.img
-apploaderD.img
-
+### Custom exceptions ###
 !cdrom.img/
