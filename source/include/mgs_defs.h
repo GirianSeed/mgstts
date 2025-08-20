@@ -43,6 +43,7 @@
 #endif
 
 /*---------------------------------------------------------------------------*/
+// Common Macro #defines
 
 #ifndef MIN
 #define MIN(x, y)       (((x) < (y)) ? (x) : (y))
@@ -51,14 +52,36 @@
 #define MAX(x, y)       (((x) > (y)) ? (x) : (y))
 #endif
 #ifndef ABS
-#define ABS(x)          (((x) >= 0) ? (x) : -(x))
+#define ABS(x)          (((x) < 0) ? -(x) : (x))
 #endif
+
+#define SIGN(x)         (((x) > 0) - ((x) < 0))
+//#define SIGN(x)       (((x) < 0) ? -1 : ((x) > 0) ? 1 : 0)
+//#define SIGN(x)       (((x) < 0) ? -1 : !!(x))
 
 #ifndef CLAMP
 #define CLAMP(x, min, max) (MAX(MIN(x, max), min))
+//#define CLAMP(x, min, max) (((x) < (min)) ? (min) : ((x) > (max)) ? (max) : (x))
+//#define CLAMP(x, min, max) (((x) > (max)) ? (max) : ((x) < (min)) ? (min) : (x))
 #endif
 
+/*---------------------------------------------------------------------------*/
+// Compiler attribute #defines
+
+#if defined(__MWERKS__)
 #define ALIGN(_x)       __attribute__((aligned(_x)))
+#define PACKED          /* discard */
+#elif defined(__GNUC__) // __SN__
+#define ALIGN(_x)       __attribute__((aligned(_x)))
+#define PACKED          __attribute__((packed))
+#elif defined(_MSC_VER)
+#define ALIGN(_x)       __declspec(align(_x))
+#define PACKED          /* discard */
+#else
+#define ALIGN(_x)       /* discard */
+#define PACKED          /* discard */
+#endif
+/* common alignments */
 #define ALIGN8          ALIGN(8)
 #define ALIGN16         ALIGN(16)
 #define ALIGN64         ALIGN(64)
@@ -69,28 +92,26 @@
 
 #define HANGUP()        (*(int *)1 = 0)
 
+// TODO: Should these be wrapped with 'do {} while (0)'?
 #ifdef _DEBUG
-
 #define MGS_ASSERT(cond)                                        \
     if (!(cond)) {                                              \
         /* todo: decompile */                                   \
         HANGUP();                                               \
     }
-#define MGS_XASSERT(cond, mesg ...)                             \
+#define MGS_XASSERT(cond, mesg...)                              \
     if (!(cond)) {                                              \
         /* todo: decompile */                                   \
         printf( mesg );                                         \
         HANGUP();                                               \
     }
-
 #else   // _DEBUG
-
-#define MGS_ASSERT(cond)                ((void)0)
-#define MGS_XASSERT(cond, mesg ...)     ((void)0)
-
+#define MGS_ASSERT(cond)                ((void)0)   // do {} while (0)
+#define MGS_XASSERT(cond, mesg...)      ((void)0)   // do {} while (0)
 #endif  // _DEBUG
 
 /*---------------------------------------------------------------------------*/
+// Color Format #defines
 
 /* RGBA8888 format */
 #ifdef WORDS_BIGENDIAN
