@@ -1,7 +1,7 @@
 #ifndef __MGSTTS_MGS_DEFS_H__
 #define __MGSTTS_MGS_DEFS_H__
 
-#include <stddef.h>
+#include <stddef.h>     // for NULL
 #include <limits.h>
 
 /* MSVC defines _countof as an extension to stdlib.h */
@@ -87,9 +87,27 @@
 #define ALIGN64         ALIGN(64)
 #define ALIGN128        ALIGN(128)
 
+// You can also just use ((void)foo) to suppress warnings.
+#if defined(__GNUC__)
+#define UNUSED          __attribute__((unused))
+// CodeWarrior has '#pragma unused(foo)' for ignoring unused variables,
+// but I don't think we can reconcile the difference from GCC's syntax.
+#else
+#define UNUSED          /* discard */
+#endif
+
+// #define USE_STATIC_KEYWORD
+#ifdef USE_STATIC_KEYWORD
+#define STATIC          static
+#else
+#define STATIC          /* fake keyword for documentation */
+#endif
+
 /*---------------------------------------------------------------------------*/
 // NOTE: <dolphin/os.h> already defines ASSERT and ASSERTMSG.
 
+// This will crash the program with the intention of invoking
+// the MTS exception handler screen (which was compiled out).
 #define HANGUP()        (*(int *)1 = 0)
 
 // TODO: Should these be wrapped with 'do {} while (0)'?

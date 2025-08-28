@@ -1,6 +1,8 @@
 #ifndef __MGSTTS_MGS_TYPES_H__
 #define __MGSTTS_MGS_TYPES_H__
 
+#include <stddef.h>     // for size_t
+#include <limits.h>     // for MIN/MAX
 #include <dolphin/types.h>
 #include "mgs_defs.h"
 
@@ -20,8 +22,8 @@ typedef s32             int32;          /* 32-bit signed integer    */
 typedef u32             u_int32;        /* 32-bit unsigned integer  */
 typedef s64             int64;          /* 64-bit signed integer    */
 typedef u64             u_int64;        /* 64-bit unsigned integer  */
-typedef s64             long64;         /* 64-bit signed integer    */
-typedef u64             u_long64;       /* 64-bit unsigned integer  */
+typedef s64             long64;         /* 64-bit signed long       */
+typedef u64             u_long64;       /* 64-bit unsigned long     */
 
 #if (defined(__GNUC__) && defined(__SIZEOF_INT128__))
 // https://gcc.gnu.org/onlinedocs/gcc/_005f_005fint128.html
