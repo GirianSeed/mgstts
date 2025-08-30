@@ -1,20 +1,16 @@
-/* -*- mode: c; tab-width: 4; indent-tabs-mode: t; -*- */
+/* -*- mode: c; tab-width: 4; indent-tabs-mode: nil; -*- */
 #ifndef __MGSTTS_FILE_CNF__
 #define __MGSTTS_FILE_CNF__
 
 FS_FILE_INFO fs_file_info[] = {
-	{ "stage.dat",        0x00000000, 0, 0, 0, 0 },
-	{ "shared/codec.dat", 0x00000000, 0, 0, 0, 0 },
-	{ "shared/face.dat",  0x00000000, 0, 0, 0, 0 },
-	{ "shared/movie.dat", 0x00000000, 0, 0, 0, 0 },
-	{ "shared/vox.dat",   0x00000000, 0, 0, 0, 0 },
-	{ "demo.dat",         0x00000000, 0, 0, 0, 0 },
-	{ NULL,               0x00000000, 0, 0, 0, 0 }
+    { "stage.dat",          0, 0, 0, 0, 0 },    // 0
+    { "shared/codec.dat",   0, 0, 0, 0, 0 },    // 1
+    { "shared/face.dat",    0, 0, 0, 0, 0 },    // 2
+    { "shared/movie.dat",   0, 0, 0, 0, 0 },    // 3
+    { "shared/vox.dat",     0, 0, 0, 0, 0 },    // 4
+    { "demo.dat",           0, 0, 0, 0, 0 },    // 5
+    { NULL,                 0, 0, 0, 0, 0 }
 };
 
 #endif // {{{ END OF FILE }}}
-
-/* Local variables: */
-/* tab-width: 4 */
-/* End: */
-/* vi:set tabstop=4: */
+/* vim:set ts=4 sw=4 sts=4 et ft=c: */
