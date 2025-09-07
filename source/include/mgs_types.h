@@ -3,7 +3,7 @@
 
 #include <stddef.h>     // for size_t
 #include <limits.h>     // for MIN/MAX
-#include <dolphin/types.h>
+#include <stdint.h>
 #include "mgs_defs.h"
 
 // from <sys/types.h>
@@ -14,16 +14,16 @@ typedef unsigned long   u_long;
 
 /*---------------------------------------------------------------------------*/
 
-typedef s8              int8;           /*  8-bit signed integer    */
-typedef u8              u_int8;         /*  8-bit unsigned integer  */
-typedef s16             int16;          /* 16-bit signed integer    */
-typedef u16             u_int16;        /* 16-bit unsigned integer  */
-typedef s32             int32;          /* 32-bit signed integer    */
-typedef u32             u_int32;        /* 32-bit unsigned integer  */
-typedef s64             int64;          /* 64-bit signed integer    */
-typedef u64             u_int64;        /* 64-bit unsigned integer  */
-typedef s64             long64;         /* 64-bit signed long       */
-typedef u64             u_long64;       /* 64-bit unsigned long     */
+typedef int8_t          int8;           /*  8-bit signed integer    */
+typedef uint8_t         u_int8;         /*  8-bit unsigned integer  */
+typedef int16_t         int16;          /* 16-bit signed integer    */
+typedef uint16_t        u_int16;        /* 16-bit unsigned integer  */
+typedef int32_t         int32;          /* 32-bit signed integer    */
+typedef uint32_t        u_int32;        /* 32-bit unsigned integer  */
+typedef int64_t         int64;          /* 64-bit signed integer    */
+typedef uint64_t        u_int64;        /* 64-bit unsigned integer  */
+typedef int64_t         long64;         /* 64-bit signed long       */
+typedef uint64_t        u_long64;       /* 64-bit unsigned long     */
 
 #if (defined(__GNUC__) && defined(__SIZEOF_INT128__))
 // https://gcc.gnu.org/onlinedocs/gcc/_005f_005fint128.html
@@ -33,8 +33,9 @@ typedef u64             u_long64;       /* 64-bit unsigned long     */
 typedef int long128 __attribute__((mode(TI)));
 typedef unsigned int u_long128 __attribute__((mode(TI)));
 #else
-typedef struct { u64 hi,lo; } long128;
-typedef struct { u64 hi,lo; } u_long128;
+// One of several ways to make a fake 128-bit integer.
+typedef struct { uint64_t hi,lo; } long128;
+typedef struct { uint64_t hi,lo; } u_long128;
 #endif
 
 typedef long128         int128;         /* 128-bit signed integer   */
