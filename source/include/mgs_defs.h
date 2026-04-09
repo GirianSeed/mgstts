@@ -109,6 +109,11 @@
 
 // This will crash the program with the intention of invoking
 // the MTS exception handler screen (which was compiled out).
+//
+// Choosing to dereference 1 instead of 0 distinguishes exceptions raised
+// intentionally from actual NULL-pointer dereference bugs, and doubles as
+// an unaligned write to memory.
+//
 #define HANGUP()        (*(int *)1 = 0)
 
 // TODO: Should these be wrapped with 'do {} while (0)'?
