@@ -2,7 +2,7 @@
 #define __MGSTTS_MGS_DEFS_H__
 
 #include <stddef.h>     // for NULL
-#include <limits.h>
+#include <limits.h>     // for MIN/MAX
 #include "gcctest.h"
 
 /* MSVC defines _countof as an extension to stdlib.h */
