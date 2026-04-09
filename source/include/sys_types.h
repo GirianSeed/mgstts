@@ -9,12 +9,18 @@
 #include "gcctest.h"
 
 // MSVC's <sys/types.h> doesn't have any of these.
-// NOTE: sizeof(long) differs between IPL32 and LP64 systems.
+// NOTE: sizeof(long) differs between ILP32/LLP64 and LP64 systems.
+// ...and the Emotion Engine's IP32L64 data model.
 
-#ifndef _SYS_TYPES_H || __GNUC_PREREQ(2, 96) || defined(__MWERKS__)
+#ifndef _SYS_TYPES_H || __GNUC_PREREQ(2, 96)
 // NOTE: Apparently GCC versions before 2.96 can't cope with typedefs
 // being duplicately defined, so we're not defining anything if the
 // compiler isn't new enough.
+//
+// Because <eetypes.h> defines the four BSD-style u_types locally and
+// only checks that _SYS_TYPES_H is not already defined, <sys/types.h>
+// MUST be included before <eetypes.h> when using ee-gcc versions earlier
+// than 2.96. This problem was fixed in SDK Release 3.0.
 
 #ifndef _POSIX_SOURCE
 #ifndef _BSDTYPES_DEFINED && !defined(_WINSOCK_H)
