@@ -4,14 +4,10 @@
 #include <stddef.h>     // for size_t
 #include <limits.h>     // for MIN/MAX
 #include <stdint.h>
+#include "sys_types.h"
 #include "mgs_defs.h"
 
-// from <sys/types.h>
-typedef unsigned char   u_char;
-typedef unsigned short  u_short;
-typedef unsigned int    u_int;
-typedef unsigned long   u_long;
-
+// NOTE: <dolphin/types.h> already defines BOOL and TRUE/FALSE.
 /*---------------------------------------------------------------------------*/
 
 typedef int8_t          int8;           /*  8-bit signed integer    */
