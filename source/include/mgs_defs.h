@@ -14,7 +14,8 @@
 #define COUNTOF(array)  _countof(array)
 
 /*---------------------------------------------------------------------------*/
-// Common Macro #defines
+/* Common Macro #defines                                                     */
+/*---------------------------------------------------------------------------*/
 
 #ifndef MIN
 #define MIN(x, y)       (((x) < (y)) ? (x) : (y))
@@ -67,7 +68,8 @@
 #endif
 
 /*---------------------------------------------------------------------------*/
-// Compiler attribute #defines
+/* Compiler attribute #defines                                               */
+/*---------------------------------------------------------------------------*/
 
 #if defined(__MWERKS__)
 #define ALIGN(_x)       __attribute__((aligned(_x)))
@@ -105,6 +107,8 @@
 #endif
 
 /*---------------------------------------------------------------------------*/
+/* Custom assertion #defines                                                 */
+/*---------------------------------------------------------------------------*/
 // NOTE: <dolphin/os.h> already defines ASSERT and ASSERTMSG.
 
 // This will crash the program with the intention of invoking
@@ -135,7 +139,8 @@
 #endif  // _DEBUG
 
 /*---------------------------------------------------------------------------*/
-// Color Format #defines
+/* Color Format #defines                                                     */
+/*---------------------------------------------------------------------------*/
 
 /*----- RGBA8888 format -----*/
 
