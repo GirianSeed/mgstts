@@ -18,6 +18,9 @@ typedef int32_t         int32;          /* 32-bit signed integer    */
 typedef uint32_t        u_int32;        /* 32-bit unsigned integer  */
 typedef int64_t         int64;          /* 64-bit signed integer    */
 typedef uint64_t        u_int64;        /* 64-bit unsigned integer  */
+
+typedef int32_t         long32;         /* 32-bit signed long       */
+typedef uint32_t        u_long32;       /* 32-bit unsigned long     */
 typedef int64_t         long64;         /* 64-bit signed long       */
 typedef uint64_t        u_long64;       /* 64-bit unsigned long     */
 
