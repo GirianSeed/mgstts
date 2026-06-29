@@ -68,9 +68,9 @@
 /*---------------------------------------------------------------------------*/
 
 #define CHARA_00014090          0x00014090
-#define CHARA_abs               0x000190b3  // GV_StrCode("abs") NewGclAbs
-#define CHARA_cos               0x00019a53  // GV_StrCode("cos") NewGclCos
-#define CHARA_sin               0x0001d98e  // GV_StrCode("sin") NewGclSin
+#define CHARA_abs               0x000190b3  // GV_StrCode("abs")
+#define CHARA_cos               0x00019a53  // GV_StrCode("cos")
+#define CHARA_sin               0x0001d98e  // GV_StrCode("sin")
 #define CHARA_000227d5          0x000227d5
 #define CHARA_00029972          0x00029972
 #define CHARA_0003f248          0x0003f248
@@ -155,14 +155,14 @@
 #define CHARA_002e572e          0x002e572e
 #define CHARA_002e9149          0x002e9149
 #define CHARA_002eb7ed          0x002eb7ed
-#define CHARA_atan              0x00325c8e  // GV_StrCode("atan") NewGclAtan
+#define CHARA_atan              0x00325c8e  // GV_StrCode("atan")
 #define CHARA_003287ed          0x003287ed
 #define CHARA_0032905c          0x0032905c
-#define CHARA_0032fb70          0x0032fb70
-#define CHARA_demo              0x0033a20f  // GV_StrCode("demo") NewPolygonDemoStart
+#define CHARA_StreamStopAll     0x0032fb70  // GV_StrCode("StreamStopAll")
+#define CHARA_demo              0x0033a20f  // GV_StrCode("demo")
 #define CHARA_0033cb5b          0x0033cb5b
 #define CHARA_0034baeb          0x0034baeb
-#define CHARA_0034cc13          0x0034cc13
+#define CHARA_save_var_read     0x0034cc13  // GV_StrCode("save_var_read")
 #define CHARA_0035b72e          0x0035b72e
 #define CHARA_00361485          0x00361485
 #define CHARA_0037130c          0x0037130c
@@ -176,7 +176,7 @@
 #define CHARA_00382f31          0x00382f31
 #define CHARA_0038e51b          0x0038e51b
 #define CHARA_00397d10          0x00397d10
-#define CHARA_rand              0x003a9224  // GV_StrCode("rand") NewRand
+#define CHARA_rand              0x003a9224  // GV_StrCode("rand")
 #define CHARA_003a930b          0x003a930b
 #define CHARA_003ad7ae          0x003ad7ae
 #define CHARA_003b4d90          0x003b4d90
@@ -228,7 +228,7 @@
 #define CHARA_00525d9f          0x00525d9f
 #define CHARA_00528e88          0x00528e88
 #define CHARA_0052911a          0x0052911a
-#define CHARA_foreach           0x00542b2d  // GV_StrCode("foreach") NewForeach
+#define CHARA_foreach           0x00542b2d  // GV_StrCode("foreach")
 #define CHARA_0054814c          0x0054814c
 #define CHARA_005521e6          0x005521e6
 #define CHARA_005574e5          0x005574e5
@@ -237,11 +237,11 @@
 #define CHARA_00580458          0x00580458
 #define CHARA_005ab223          0x005ab223
 #define CHARA_005af93a          0x005af93a
-#define CHARA_varsave           0x005b316e  // GV_StrCode("varsave") NewSaveVariable
+#define CHARA_varsave           0x005b316e  // GV_StrCode("varsave")
 #define CHARA_005b9f50          0x005b9f50
 #define CHARA_005d9037          0x005d9037
 #define CHARA_00602930          0x00602930
-#define CHARA_0060d52e          0x0060d52e
+#define CHARA_StreamStart       0x0060d52e  // GV_StrCode("StreamStart")
 #define CHARA_006210ef          0x006210ef
 #define CHARA_00648da4          0x00648da4
 #define CHARA_00656986          0x00656986
@@ -273,7 +273,7 @@
 #define CHARA_007782b0          0x007782b0
 #define CHARA_0078fa32          0x0078fa32
 #define CHARA_007995bd          0x007995bd
-#define CHARA_007aa13a          0x007aa13a
+#define CHARA_Stream            0x007aa13a  // GV_StrCode("Stream")
 #define CHARA_007acfea          0x007acfea
 #define CHARA_007aea62          0x007aea62
 #define CHARA_007d1410          0x007d1410
@@ -285,7 +285,7 @@
 #define CHARA_00807cdd          0x00807cdd
 #define CHARA_0080ae12          0x0080ae12
 #define CHARA_0081f27b          0x0081f27b
-#define CHARA_0082a05e          0x0082a05e
+#define CHARA_store_loadedvar   0x0082a05e  // GV_StrCode("store_loadedvar")
 #define CHARA_0082d33e          0x0082d33e
 #define CHARA_0082e25e          0x0082e25e
 #define CHARA_00836975          0x00836975
@@ -468,7 +468,7 @@
 #define CHARA_00f13775          0x00f13775
 #define CHARA_Player            0x00f271b8  // GV_StrCode("Player")
 #define CHARA_00f28c13          0x00f28c13
-#define CHARA_00f2dfcd          0x00f2dfcd
+#define CHARA_load_restart      0x00f2dfcd  // GV_StrCode("load_restart")
 #define CHARA_00f2f1be          0x00f2f1be
 #define CHARA_00f37129          0x00f37129
 #define CHARA_00f5fe29          0x00f5fe29
@@ -490,7 +490,7 @@
 #define CHARA_00fd8543          0x00fd8543
 #define CHARA_00fdfb9c          0x00fdfb9c
 #define CHARA_00fe401b          0x00fe401b
-#define CHARA_00fe6730          0x00fe6730
+#define CHARA_sound_test        0x00fe6730  // GV_StrCode("sound_test")
 #define CHARA_00fee3c9          0x00fee3c9
 #define CHARA_00ff6d53          0x00ff6d53
 
