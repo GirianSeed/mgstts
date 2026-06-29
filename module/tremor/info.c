@@ -59,9 +59,8 @@ char *vorbis_comment_query(vorbis_comment *vc, char *tag, int count){
   int taglen = strlen(tag)+1; /* +1 for the = we append */
   char *fulltag = (char *)alloca(taglen+ 1);
 
-  strcpy(fulltag, tag);
-  strcat(fulltag, "=");
-  
+  snprintf(fulltag, taglen+1, "%s=", tag);
+
   for(i=0;i<vc->comments;i++){
     if(!tagcompare(vc->user_comments[i], fulltag, taglen)){
       if(count == found)
@@ -78,8 +77,7 @@ int vorbis_comment_query_count(vorbis_comment *vc, char *tag){
   int i,count=0;
   int taglen = strlen(tag)+1; /* +1 for the = we append */
   char *fulltag = (char *)alloca(taglen+1);
-  strcpy(fulltag,tag);
-  strcat(fulltag, "=");
+  snprintf(fulltag, taglen+1, "%s=", tag);
 
   for(i=0;i<vc->comments;i++){
     if(!tagcompare(vc->user_comments[i], fulltag, taglen))
